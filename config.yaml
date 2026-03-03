@@ -109,6 +109,8 @@ pcbs:
         params:
           from: GND
           to: RST
+          reversible: true
+          side: "B"
         where:
           ref.aggregate.parts: [main_ring_top]
           shift: [-(chocx * 0.6), (chocy * board_top) + (board_top_padding * 0.5)]
@@ -134,7 +136,8 @@ pcbs:
           - ref: main_outer_top
             shift: [chocx / 2 - (chocspace - 1.3), chocy * board_top + 1]
         params:
-          orientation: up
+          orientation: down
+          # reversible: true
 
 outlines:
   _base:
